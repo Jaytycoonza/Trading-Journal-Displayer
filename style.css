@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+input{
+  border: 1px solid #cccccc00;
+  border-radius: 10px;
+  width: 220px;
+  background-color: rgb(215, 222, 215);
+  color: rgb(255, 255, 255);
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+}
+button{
+  border: 1px solid #cccccc00;
+  border-radius: 10px;
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+
+}
+#addCsvBtn{
+  background-color: rgb(74, 255, 74);
+  color: rgb(255, 255, 255);
+}
+#clearTableBtn{
+  background-color: rgb(255, 40, 40);
+  color: rgb(255, 255, 255);
+}
+
+/* Scrollable container */
+.table-wrapper {
+  max-height: 100vh;
+  overflow: auto;
+  border: 1px solid #ccc;
+ 
+}
+
+/* Core table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+ /* table-layout: fixed; /*        /* enforce fixed column widths */
+  font-size: 12px;             /* smaller font for fitting text */
+}
+
+/* Header & cell styling */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  white-space: nowrap;         /* no vertical wrapping */
+  overflow: hidden;            /* hide overflowed text */
+  text-overflow: ellipsis;     /* show “…” for overflow */
+  text-align: left;            /* horizontal alignment */
+}
+
+/* Zebra stripes */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Sticky header */
+th {
+  background-color: #4caf50;
+  color: white;
+  position: sticky;
+  top: 0;
+}
