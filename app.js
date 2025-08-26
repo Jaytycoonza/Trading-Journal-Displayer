@@ -3,6 +3,20 @@ const allData = [];
 const headerSet = new Set();
 const preview = document.getElementById('preview');
 
+function enableSummaryButtons(){
+  document.getElementById('btnCalculate').disabled = false;
+  document.getElementById('btnClear').disabled = false;
+};
+
+function showBtnCalculate(){
+  const btnContainer = document.getElementById('btnCalculate');
+  btnContainer.style.display = 'block';
+};
+function showBtnClear(){
+  const btnContainer = document.getElementById('btnClear');
+  btnContainer.style.display = 'block';
+};
+
 // Add CSV button
 document.getElementById('addCsvBtn').addEventListener('click', () => {
   const fileInput = document.getElementById('csvFile');
@@ -22,6 +36,8 @@ document.getElementById('addCsvBtn').addEventListener('click', () => {
       // Re-render table
       renderTable();
       fileInput.value = ''; // reset input for next upload
+      enableSummaryButtons();
+      showBtnCalculate();
     }
   });
 });
@@ -31,6 +47,9 @@ document.getElementById('clearTableBtn').addEventListener('click', () => {
   allData.length = 0;
   headerSet.clear();
   renderTable();
+  document.getElementById('btnCalculate').disabled = true;
+  document.getElementById('btnCalculate').style.display = 'none';
+  document.getElementById('btnClear').style.display = 'none';
 });
 
 // Render function combines headers & rows
