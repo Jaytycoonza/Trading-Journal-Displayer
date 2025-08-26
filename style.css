@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -29,9 +29,28 @@ button{
   background-color: rgb(74, 255, 74);
   color: rgb(255, 255, 255);
 }
+
 #clearTableBtn{
   background-color: rgb(255, 40, 40);
   color: rgb(255, 255, 255);
+}
+
+#btnCalculate{
+  background-color: rgb(74, 255, 74);
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#btnClear{
+  background-color: rgb(255, 40, 40);
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 /* Scrollable container */
