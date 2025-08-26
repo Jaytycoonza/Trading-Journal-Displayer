@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Trading Journal Display</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
   <h1>Trading Data</h1>
@@ -22,8 +23,20 @@
   <div class="table-wrapper">
     <table id="preview"></table>
   </div>
+  <div id="summaryButtons">
+
+  <button id="btnCalculate" disabled style="display: none;">Calculate Summary</button>
+  <div id="tradeSummary"></div>
+
+  
+  <div id="tradeSummary"></div>
+  <div id="tradeTotals" style="margin-top: 1rem;"></div>
+  <button id="btnClear" disabled style="display: none;">Clear Summary</button>
+
+  </div>
 
   <script src="papaparse.min.js"></script>
   <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
